@@ -95,6 +95,8 @@ export default function HeroGeometric({
 
 
   return (
+    <>
+    
     <div className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#030303]">
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
@@ -186,7 +188,7 @@ export default function HeroGeometric({
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-8 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Organize your thoughts, ideas, and information in one place.
+              Organize And Share your thoughts, ideas, and information in one place.
               Accessible from anywhere, at any time.
             </p>
                 <div className="flex justify-center">
@@ -197,6 +199,18 @@ export default function HeroGeometric({
       </div>
       <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
     </div>
+    <section className="py-16 bg-[#030303] text-zinc-50 border-t border-zinc-800">
+        <div className="container mx-auto px-6 md:px-12 lg:px-20">
+          <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
+          <p className="text-lg text-center max-w-3xl mx-auto">
+            We are a team of passionate developers and designers dedicated to creating
+            innovative and user-friendly web applications. Our mission is to deliver
+            high-quality solutions that empower businesses and individuals to achieve
+            their goals.
+          </p>
+        </div>
+      </section>
+    </>
   );
 }
 
