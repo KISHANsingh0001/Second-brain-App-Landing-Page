@@ -4,8 +4,11 @@ import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { Circle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import GlowEffectButton from "./button";
+import AnimatedBeam from "./animated-beam";
+import AboutUs from "./AboutUs";
+import IconMarquee from "./cta";
 
-function ElegantShape({
+export function ElegantShape({
   className,
   delay = 0,
   width = 400,
@@ -197,19 +200,13 @@ export default function HeroGeometric({
           </motion.div>
         </div>
       </div>
+
       <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
+
     </div>
-    <section className="py-16 bg-[#030303] text-zinc-50 border-t border-zinc-800">
-        <div className="container mx-auto px-6 md:px-12 lg:px-20">
-          <h2 className="text-3xl font-bold text-center mb-6">About Us</h2>
-          <p className="text-lg text-center max-w-3xl mx-auto">
-            We are a team of passionate developers and designers dedicated to creating
-            innovative and user-friendly web applications. Our mission is to deliver
-            high-quality solutions that empower businesses and individuals to achieve
-            their goals.
-          </p>
-        </div>
-      </section>
+    <div className="bg-[#030303]"><AnimatedBeam/></div>
+    <div className="bg-[#030303]"><IconMarquee/></div>
+     <div><AboutUs/></div>
     </>
   );
 }
