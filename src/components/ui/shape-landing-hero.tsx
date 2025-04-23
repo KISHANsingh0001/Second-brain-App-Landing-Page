@@ -204,9 +204,7 @@ export default function HeroGeometric({
       <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" />
 
     </div>
-    <div className="bg-[#030303]"><AnimatedBeam/></div>
-    <div className="bg-[#030303]"><IconMarquee/></div>
-     <div><AboutUs/></div>
+    
     </>
   );
 }

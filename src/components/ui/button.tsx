@@ -1,3 +1,4 @@
+"use client";
 export const runtime = "edge";
 import { GlowEffect } from '@/components/ui/glow-effect';
 import { ArrowRight } from 'lucide-react';

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Shield, HeartHandshake, Zap, Star, Sun, Moon, Youtube, Twitter, Link } from "lucide-react";
 import Marquee from "./marquee";
