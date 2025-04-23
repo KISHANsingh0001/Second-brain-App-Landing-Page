@@ -1,30 +1,90 @@
+"use client";
 import Logo from '@/icons/Logo'
 import { Button } from 'antd'
 import Link from 'next/link'
-import React from 'react'
+import { useState } from 'react'
 
 
 function Navbar() {
-    return (
-      <nav className='w-full flex justify-between py-[10px] px-4 sm:px-6 lg:px-16 backdrop-blur-lg fixed top-0 z-50 border-b border-white/10'>
-        <div className='flex items-center justify-center text-md text-primary gap-3 '>
-          <div><Logo /></div>
-          <div>
-            <Link href='/' className='text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 font-extrabold text-xl'>
-              Second Brain
-            </Link>
-          </div>
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  return (
+    <nav className="w-full flex flex-wrap items-center justify-between py-[10px] px-4 sm:px-6 lg:px-16 backdrop-blur-lg fixed top-0 z-50 border-b border-white/10">
+      {/* Left Section: Logo and Title */}
+      <div className="flex items-center gap-3">
+        <div>
+          <Logo />
         </div>
-        <div className='flex gap-4'>
-          <Button type='primary'>
-            <Link href='/sign-in'>Log in</Link>
-          </Button>
-          <Button type='primary'>
-            <Link href='/sign-up'>Sign up</Link>
-          </Button>
+        <div>
+          <Link
+            href="/"
+            className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 font-extrabold text-lg sm:text-xl"
+          >
+            Second Brain
+          </Link>
         </div>
-      </nav>
-    )
-  }
+      </div>
+
+      {/* Right Section: Buttons */}
+      <div className="hidden sm:flex gap-4">
+        <Button type="primary">
+          <Link href="/sign-in">Log in</Link>
+        </Button>
+        <Button type="primary">
+          <Link href="/sign-up">Sign up</Link>
+        </Button>
+      </div>
+
+      {/* Mobile Menu Button */}
+      <div className="sm:hidden flex items-center">
+        <button
+          className="text-white focus:outline-none"
+          aria-label="Toggle Menu"
+          onClick={toggleMenu}
+        >
+          {/* Hamburger Icon */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={2}
+            stroke="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-black  shadow-lg z-40 flex flex-col items-start p-4 sm:hidden">
+          <Link
+            href="/sign-in"
+            className="text-white hover:text-gray-600 py-2 px-4 w-full text-left"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Button type='primary'>Log in</Button>
+          </Link>
+          <Link
+            href="/sign-up"
+            className="text-gray-800 hover:text-gray-600 py-2 px-4 w-full text-left"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <Button type='primary'>Sign up</Button>
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
+}
   
   export default Navbar
