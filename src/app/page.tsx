@@ -9,7 +9,7 @@ import HeroGeometric from "@/components/ui/shape-landing-hero";
 {/* <HeroSectionDemo/> */}
 
 export default function Home() {
-  return <div className="">
+  return <div className="w-screen h-screen overflow-x-hidden">
     <Navbar/>
    <HeroGeometric/>
    <AnimatedBeam/>

@@ -12,7 +12,7 @@
 
 :root {
   --background: #030303; /* Set the global background color */
-    overflow-x:hidden;
+    
 }
 
 @theme inline {
@@ -36,35 +36,12 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 }
-@keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(70%);
-  }
-}
 
-@keyframes marquee-vertical {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-70%);
-  }
-}
-
-.animate-marquee {
-  animation: marquee var(--duration, 40s) linear infinite;
-}
-
-.animate-marquee-vertical {
-  animation: marquee-vertical var(--duration, 40s) linear infinite;
-}
 @layer base {
   * {
     @apply border-border outline-ring/50;
-  
+    margin: 0;
+    padding: 0;
     scrollbar-width: none;
     
   }
@@ -72,7 +49,6 @@
     @apply bg-background text-foreground;
     margin: 0;
     padding: 0;
-   
     box-sizing: border-box;
   }
 }

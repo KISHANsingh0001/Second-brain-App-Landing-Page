@@ -125,7 +125,8 @@ export default function AnimatedBeam() {
         //  </div>
     return (
       <div className="relative w-full py-14">
-         <div className="absolute inset-0 overflow-hidden">
+
+         {/* <div className="absolute inset-0 overflow-hidden">
                  <ElegantShape
                    delay={0.3}
                    width={600}
@@ -170,7 +171,7 @@ export default function AnimatedBeam() {
                    gradient="from-cyan-500/[0.15]"
                    className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
                  />
-               </div>
+         </div> */}
      
     <motion.div
       custom={0}
