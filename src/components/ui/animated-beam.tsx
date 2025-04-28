@@ -139,6 +139,53 @@ export default function AnimatedBeam() {
         );
     };
 
+        //  <div className="relative ">
+        //   <ElegantShape
+        //            delay={0.2}
+        //            width={610}
+        //            height={140}
+        //            rotate={55}
+        //            gradient="from-indigo-500/[0.15]"
+        //            className=" absolute -inset-x-53 inset-y-190 m-auto "
+        //          />
+         
+        //          <ElegantShape
+        //            delay={0.5}
+        //            width={500}
+        //            height={120}
+        //            rotate={55}
+        //            gradient="from-rose-500/[0.15]"
+        //            className="absolute inset-x-250 -inset-y-40 m-auto "
+        //          />
+         
+        //          {/* <ElegantShape
+        //            delay={0.4}
+        //            width={300}
+        //            height={80}
+        //            rotate={-8}
+        //            gradient="from-violet-500/[0.15]"
+        //            className="left-[5%] md:left-[10%] bottom-[15%] md:bottom-[10%]"
+        //          /> */}
+         
+        //          {/* <ElegantShape
+        //            delay={0.6}
+        //            width={200}
+        //            height={60}
+        //            rotate={20}
+        //            gradient="from-amber-500/[0.15]"
+        //            className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
+        //          /> */}
+         
+        //          {/* <ElegantShape
+        //            delay={0.7}
+        //            width={150}
+        //            height={40}
+        //            rotate={-25}
+        //            gradient="from-cyan-500/[0.15]"
+        //            className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
+        //          /> */}
+
+        //  </div>
     return (
         <motion.div
             custom={0}
@@ -147,58 +194,12 @@ export default function AnimatedBeam() {
             animate="visible"
             className="w-full py-14 "
         >
-         <div className="relative ">
-          <ElegantShape
-                   delay={0.2}
-                   width={610}
-                   height={140}
-                   rotate={55}
-                   gradient="from-indigo-500/[0.15]"
-                   className=" absolute -inset-x-53 inset-y-190 m-auto "
-                 />
-         
-                 <ElegantShape
-                   delay={0.5}
-                   width={500}
-                   height={120}
-                   rotate={55}
-                   gradient="from-rose-500/[0.15]"
-                   className="absolute inset-x-250 -inset-y-40 m-auto "
-                 />
-         
-                 {/* <ElegantShape
-                   delay={0.4}
-                   width={300}
-                   height={80}
-                   rotate={-8}
-                   gradient="from-violet-500/[0.15]"
-                   className="left-[5%] md:left-[10%] bottom-[15%] md:bottom-[10%]"
-                 /> */}
-         
-                 {/* <ElegantShape
-                   delay={0.6}
-                   width={200}
-                   height={60}
-                   rotate={20}
-                   gradient="from-amber-500/[0.15]"
-                   className="right-[15%] md:right-[20%] top-[10%] md:top-[15%]"
-                 /> */}
-         
-                 {/* <ElegantShape
-                   delay={0.7}
-                   width={150}
-                   height={40}
-                   rotate={-25}
-                   gradient="from-cyan-500/[0.15]"
-                   className="left-[20%] md:left-[25%] top-[5%] md:top-[10%]"
-                 /> */}
-
-         </div>
 
             <div
                 ref={containerRef}
-                className="relative flex h-[400px] sm:h-[500px] md:h-[600px] w-full max-w-7xl mx-auto flex-col items-center justify-center overflow-visible"
-            >
+                className="relative flex h-[16rem] sm:h-[25.625rem] sm:w-[600px] md:h-[483px] md:w-[800px] 
+                w-full max-w-5xl mx-auto flex-col items-center justify-center overflow-visible border-4"
+            >  
                 {/* Orange Gradient Background */}
                 <div
                     className={cn(
@@ -208,12 +209,13 @@ export default function AnimatedBeam() {
                 />
 
                 {/* Main Content Container */}
+                
                 <div
-                    className="w-full h-full max-w-[90vw] max-h-[60vh] mx-4 rounded-lg shadow-xl overflow-hidden relative"
+                    className="w-full h-full mx-4 rounded-lg shadow-xl overflow-hidden  border-4 border-white "
                 >
                     <div
                         ref={carouselRef}
-                        className="w-full h-full flex snap-x snap-mandatory overflow-x-auto scroll-smooth"
+                        className="w-full h-full flex  overflow-x-auto scroll-smooth"
                         style={{ scrollbarWidth: 'none' }}
                     >
                         {images.map((src, index) => (
@@ -225,16 +227,17 @@ export default function AnimatedBeam() {
                                     src={src}
                                     alt={`Image ${index + 1}`}
                                     fill
-                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+                                    
                                     className={`rounded-lg object-contain transition-opacity duration-500 ${index === currentImageIndex ? 'opacity-100' : 'opacity-100'}`}
                                 />
                             </div>
                         ))}
                     </div>
                 </div>
+            </div>
 
-                <div className="flex">
-
+               <div className="flex justify-center">
+               <div className="flex">
                     <div
 
                         className="cursor-pointer z-10 "
@@ -251,8 +254,7 @@ export default function AnimatedBeam() {
                     </div>
 
                 </div>
-
-            </div>
+               </div>
             
         </motion.div>
     )

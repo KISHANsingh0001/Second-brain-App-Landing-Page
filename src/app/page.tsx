@@ -6,11 +6,10 @@ import Navbar from "@/components/ui/navBar";
 import HeroGeometric from "@/components/ui/shape-landing-hero";
 
 
+{/* <HeroSectionDemo/> */}
 
 export default function Home() {
   return <div className="">
-    {/* <HeroSectionDemo/> */}
-   <div>
     <Navbar/>
    <HeroGeometric/>
    <AnimatedBeam/>
@@ -19,6 +18,6 @@ export default function Home() {
     {/* Footer Section */}
     <Footer/>
     </div>
-   </div>
+   
 
 }

@@ -61,14 +61,14 @@ export function ElegantShape({
         <div
           className={cn(
             "absolute inset-0 rounded-full",
-            "bg-gradient-to-r to-transparent",
+            "bg-gradient-to-r to-transparent text-white",
             gradient,
             "backdrop-blur-[2px] border-2 border-white/[0.15]",
             "shadow-[0_8px_32px_0_rgba(255,255,255,0.1)]",
             "after:absolute after:inset-0 after:rounded-full",
             "after:bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.2),transparent_70%)]"
           )}
-        />
+        ></div>
       </motion.div>
     </motion.div>
   );
@@ -195,7 +195,7 @@ export default function HeroGeometric({
               Accessible from anywhere, at any time.
             </p>
                 <div className="flex justify-center">
-                    <GlowEffectButton />
+                    {/* <GlowEffectButton /> */}
                 </div>
           </motion.div>
         </div>

@@ -8,25 +8,12 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-    margin: 0; /* Reset margin */
-    padding: 0; /* Reset padding */
-    box-sizing: border-box; 
-     
-  }
-  body {
-    @apply bg-background text-foreground;
-    overflow-x: hidden;
-  }
-}
+
 
 :root {
   --background: #030303; /* Set the global background color */
+    overflow-x:hidden;
 }
-
-
 
 @theme inline {
   --color-background: var(--background);
@@ -77,8 +64,19 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  
+    scrollbar-width: none;
+    
   }
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+   
+    box-sizing: border-box;
   }
 }
+
+
+
+

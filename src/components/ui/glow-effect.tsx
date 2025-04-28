@@ -33,7 +33,7 @@ export function GlowEffect({
   style,
   colors = ['#FF5733', '#33FF57', '#3357FF', '#F1C40F'],
   mode = 'rotate',
-  blur = 'medium',
+  blur = 'strong',
   transition,
   scale = 1,
   duration = 5,
