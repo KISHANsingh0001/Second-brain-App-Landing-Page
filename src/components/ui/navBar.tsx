@@ -1,4 +1,5 @@
 "use client";
+import { SIGNIN_URL, SIGNUP_URL } from '@/config';
 import Logo from '@/icons/Logo'
 import { Button } from 'antd'
 import Link from 'next/link'
@@ -22,7 +23,7 @@ function Navbar() {
       <div>
         <Link
           href="/"
-          className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 font-extrabold text-lg sm:text-xl"
+          className="text-transparent text-white font-bold text-2xl"
         >
           Second Brain
         </Link>
@@ -32,10 +33,10 @@ function Navbar() {
     {/* Right Section: Buttons */}
     <div className="hidden sm:flex gap-4">
       <Button type="primary">
-        <Link href="/sign-in">Log in</Link>
+        <Link href={SIGNIN_URL}>Log in</Link>
       </Button>
       <Button type="primary">
-        <Link href="/sign-up">Sign up</Link>
+        <Link href={SIGNUP_URL}>Sign up</Link>
       </Button>
     </div>
 

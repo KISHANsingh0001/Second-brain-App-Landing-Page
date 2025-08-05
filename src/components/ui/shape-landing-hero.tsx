@@ -196,13 +196,13 @@ export default function HeroGeometric({
               Accessible from anywhere, at any time.
             </p>
                 <div className="flex justify-center">
-                    {/* <GlowEffectButton /> */}
+                    <GlowEffectButton />
                 </div>
           </motion.div>
         </div>
       </div>
-
-      {/* <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 " /> */}
+{/* 
+      <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none" /> */}
 
     </div>
     
