@@ -14,7 +14,7 @@ function Navbar() {
   };
 
   return (
-    <nav className="w-full max-w-full flex flex-wrap items-center justify-between py-[10px] px-4 sm:px-6 lg:px-16 backdrop-blur-lg fixed top-0 z-50 border-b border-white/10 overflow-hidden">
+    <nav className="w-full max-w-full flex flex-wrap items-center justify-between py-[10px] px-4 sm:px-6 lg:px-16 backdrop-blur-lg fixed top-0 z-50 border-b border-white/10">
     {/* Left Section: Logo and Title */}
     <div className="flex items-center gap-3">
       <div>
