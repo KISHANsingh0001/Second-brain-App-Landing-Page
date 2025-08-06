@@ -69,14 +69,14 @@ function Navbar() {
     {isMenuOpen && (
       <div className="absolute top-full left-0 w-full bg-black text-white shadow-lg z-50 flex flex-col items-start p-4 sm:hidden">
         <Link
-          href="/sign-in"
+          href={SIGNIN_URL}
           className="hover:text-gray-300 py-2 px-4 w-full text-left"
           onClick={() => setIsMenuOpen(false)}
         >
           <Button type="primary" className="w-full">Log in</Button>
         </Link>
         <Link
-          href="/sign-up"
+          href={SIGNUP_URL}
           className="hover:text-gray-300 py-2 px-4 w-full text-left"
           onClick={() => setIsMenuOpen(false)}
         >
