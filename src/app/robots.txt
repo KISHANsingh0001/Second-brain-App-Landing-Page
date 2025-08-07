@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: User-agent: *
+Allow: /
+
+Sitemap: https://brainly.secondbrain.sbs/sitemap.xmlhttps://brainly.secondbrain.sbs/sitemap.xml
