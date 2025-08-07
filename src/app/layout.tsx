@@ -37,20 +37,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://brainly.secondbrain.sbs'), // Replace with your actual domain
+  metadataBase: new URL('https://brain.secondbrain.sbs'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "Second Brain - Your Personal Knowledge Hub",
     description: "Organize, store and share your YouTube videos, tweets, and links in one dashboard. Transform scattered information into actionable insights.",
-    url: 'https://brainly.secondbrain.sbs', // Replace with your actual domain
+    url: 'https://brain.secondbrain.sbs',
     siteName: 'Second Brain',
     images: [
       {
-        url: '/brain.png', // Using your existing brain.png
-        width: 1200,
-        height: 630,
+        url: '/android-chrome-512x512.png', // Using the generated icon
+        width: 512,
+        height: 512,
         alt: 'Second Brain - Personal Knowledge Hub',
       },
     ],
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Second Brain - Your Personal Knowledge Hub",
     description: "Organize, store and share your content in one powerful dashboard. Transform scattered information into actionable insights.",
-    images: ['/brain.png'], 
+    images: ['/android-chrome-512x512.png'], 
     creator: '@KishanS36200218', 
   },
   robots: {
@@ -76,11 +76,15 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/favicon.png',
-    shortcut: '/favicon.png',
-    apple: '/favicon.png',
+    icon: [
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any', type: 'image/x-icon' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json', 
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -91,11 +95,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Favicon links */}
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <link rel="canonical" href="https://brainly.secondbrain.sbs" />
+        <link rel="canonical" href="https://brain.secondbrain.sbs" />
         
         {/* Structured Data for SEO */}
         <script
@@ -106,7 +116,7 @@ export default function RootLayout({
               "@type": "WebApplication",
               "name": "Second Brain",
               "description": "Your Personal Knowledge Hub - Organize, store and share your content in one dashboard",
-              "url": "https://brainly.secondbrain.sbs",
+              "url": "https://brain.secondbrain.sbs",
               "applicationCategory": "ProductivityApplication",
               "operatingSystem": "Web",
               "author": {
