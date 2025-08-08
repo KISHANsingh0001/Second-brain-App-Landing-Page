@@ -7,11 +7,13 @@ export const runtime = "edge";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+ 
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+ 
 });
 
 export const metadata: Metadata = {
@@ -75,6 +77,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  manifest: '/manifest.json',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
@@ -84,7 +87,6 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
-  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -95,17 +97,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Favicon links */}
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         
         {/* Additional SEO meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
         <link rel="canonical" href="https://brain.secondbrain.sbs" />
+
+       
         
         {/* Structured Data for SEO */}
         <script
