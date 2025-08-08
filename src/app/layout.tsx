@@ -126,7 +126,6 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <link rel="canonical" href="https://brain.secondbrain.sbs" />
         
          {/* Explicitly add Apple-specific meta tags for better macOS support */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
