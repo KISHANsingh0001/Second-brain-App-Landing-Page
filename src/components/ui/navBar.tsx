@@ -32,12 +32,16 @@ function Navbar() {
 
     {/* Right Section: Buttons */}
     <div className="hidden sm:flex gap-4">
+      <Link href={SIGNIN_URL}>
       <Button type="primary">
-        <Link href={SIGNIN_URL}>Log in</Link>
+        Log in
       </Button>
+      </Link>
+      <Link href={SIGNUP_URL}>
       <Button type="primary">
-        <Link href={SIGNUP_URL}>Sign up</Link>
+        Sign up
       </Button>
+      </Link>
     </div>
 
     {/* Mobile Menu Button */}
