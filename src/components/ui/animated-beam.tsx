@@ -291,7 +291,7 @@ const slideVariants = {
   }),
 };
 
-const images = ["/pic2.png", "/pic1.png"];
+const images = ["/pic2.webp", "/pic1.webp"];
 const AUTO_SLIDE_INTERVAL = 5000; // Auto slide every 5 seconds
 
 export default function AnimatedBeam() {
