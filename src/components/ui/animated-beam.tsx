@@ -277,7 +277,7 @@ const slideVariants = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.25, 0.4, 0.25, 1],
     },
   },
@@ -285,7 +285,7 @@ const slideVariants = {
     x: direction > 0 ? '-100%' : '100%',
     opacity: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.4,
       ease: [0.25, 0.4, 0.25, 1],
     },
   }),
